@@ -25,10 +25,10 @@ const Header = () => {
       <div className='top-strip py-2 border-top-1 border-b-2 border-[#eaeaea] bg-[#f8f8f8] text-center'>
         <div className='container'>
           <div className='flex items-center justify-between'>
-            <div className='col1 w-[50%]'>
+            <div className='col_1 w-[50%]'>
               <p className='text-[14px] font-[500] pl-5'>Get upto 50% off new session styles, limited time only</p>
             </div>
-            <div className='col2 flex items-center justify-end'>
+            <div className='col_2 flex items-center justify-end'>
               <ul className='flex items-center gap-4'>
                 <li className='list-none '>
                   <Link to='/help-center' className='text-[13px] link font-[500] transition'>Help Center</Link>
@@ -44,13 +44,13 @@ const Header = () => {
       </div>
       <div className='header py-4 border-b-[1px] border-gray-200'>
         <div className='flex items-center justify-between'>
-          <div className='col1 w-[25%]' >
+          <div className='col_1 w-[25%]' >
             <Link className="flex items-center pl-10" to={'/'} ><img src='/logo-1691412328.jpg' alt='logo' /></Link>
           </div>
-          <div className='col2 w-[45%]'>
+          <div className='col_2 w-[45%]'>
             <Search />
           </div>
-          <div className='col3 w-[30%] flex items-center pl-10'>
+          <div className='col_3 w-[30%] flex items-center pl-10'>
             <ul className='flex items-center gap-4 w-full'>
               <li className='list-none'>
                 <Link to='/login' className='text-[13px] link font-[500] transition'>Login</Link> &nbsp;|&nbsp;

@@ -1,0 +1,161 @@
+.home-cat-slider-wrapper {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.07);
+  margin-bottom: 2rem;
+  padding: 1rem 0.5rem;
+  overflow: visible;
+  position: relative;
+  max-width: 1640px;    /* Limit the width */
+  margin-left: auto;    /* Center horizontally */
+  margin-right: auto;   /* Center horizontally */
+  width: 96%;           /* Responsive width */
+}
+
+.mySwiper.cat-swiper {
+  padding: 0 1rem;
+  overflow: visible;
+  position: relative;
+}
+
+.mySwiper.cat-swiper .swiper-slide {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Swiper navigation buttons */
+.mySwiper.cat-swiper .swiper-button-next,
+.mySwiper.cat-swiper .swiper-button-prev {
+  color: #ff5252;
+  background: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s, color 0.2s;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 30; /* Ensure buttons are above everything */
+  pointer-events: auto;
+  position: absolute;
+}
+
+.mySwiper.cat-swiper .swiper-button-prev {
+  left: -28px;
+}
+
+.mySwiper.cat-swiper .swiper-button-next {
+  right: -28px;
+}
+
+.mySwiper.cat-swiper .swiper-button-next:hover,
+.mySwiper.cat-swiper .swiper-button-prev:hover {
+  background: #ff5252;
+  color: #fff;
+}
+
+.mySwiper.cat-swiper .cat-link,
+.mySwiper.cat-swiper .cat-item,
+.mySwiper.cat-swiper .cat-img-wrapper,
+.mySwiper.cat-swiper .cat-img {
+  pointer-events: auto;
+}
+
+/* Category card styles */
+.cat-link {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.cat-item {
+  background: linear-gradient(135deg, #f8fafc 60%, #ffe5e5 100%);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 1.5rem 0.7rem 1rem 0.7rem;
+  box-shadow: 0 4px 16px rgba(31,38,135,0.06), 0 1.5px 4px rgba(255,82,82,0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, background 0.2s, transform 0.2s;
+  cursor: pointer;
+  min-height: 160px;
+  border: 1px solid #f3f3f3;
+}
+
+.cat-item:hover, .cat-item:focus, .cat-item:active, .cat-item.group:hover {
+  background: linear-gradient(135deg, #fff 60%, #ffe5e5 100%);
+  box-shadow: 0 8px 24px rgba(255,82,82,0.13);
+  transform: translateY(-4px) scale(1.04);
+  border-color: #ffe5e5;
+}
+
+.cat-img-wrapper {
+  background: linear-gradient(135deg, #ffe5e5 60%, #fff 100%);
+  border-radius: 50%;
+  padding: 18px;
+  margin-bottom: 0.7rem;
+  box-shadow: 0 2px 8px rgba(255,82,82,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  transition: box-shadow 0.2s;
+}
+
+.cat-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.cat-item:hover .cat-img {
+  transform: scale(1.1) rotate(-8deg);
+}
+
+.cat-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+  margin-top: 0.2rem;
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+}
+
+.cat-item:hover .cat-title {
+  color: #ff5252;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-cat-slider-wrapper {
+    border-radius: 0.7rem;
+    padding: 0.5rem 0.2rem;
+  }
+  .cat-item {
+    min-height: 110px;
+    padding: 0.8rem 0.2rem 0.5rem 0.2rem;
+  }
+  .cat-img-wrapper {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+  }
+  .cat-img {
+    width: 38px;
+    height: 38px;
+  }
+  .cat-title {
+    font-size: 0.85rem;
+  }
+  .mySwiper.cat-swiper .swiper-button-prev {
+    left: -18px;
+  }
+  .mySwiper.cat-swiper .swiper-button-next {
+    right: -18px;
+  }
+}
